@@ -9,7 +9,7 @@ const { Item } = Form;
 
 function RegistrationForm() {
 
-  let navigate = useNavigate('');
+  let navigate = useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -21,7 +21,8 @@ function RegistrationForm() {
 
     try {
       const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTmFuZGl0YUFONzciLCJzdWIiOjYsImlhdCI6MTY4OTg1MDIyNywiZXhwIjoxNjg5OTM2NjI3fQ.zzLoNiJkLNMl4No9AxpMVoDv0hGjIUxatmnxBCPTZ2E";
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/user/register`, {
+      // const response = await axios.post(`${process.env.REACT_APP_API_URL}/user/register`, {
+      const response = await axios.post(`http://localhost:3000/user/register`, {
         name, email, password, confirm
       },
   
@@ -35,7 +36,7 @@ function RegistrationForm() {
     );
 
     console.log(response.data); 
-    navigate("/");
+    navigate(`/welcome/${name}`);
   } catch (error) {
     console.error('Registration failed', error);
   }
