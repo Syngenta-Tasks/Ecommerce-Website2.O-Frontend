@@ -1,3 +1,4 @@
+
 import {Route, Routes } from 'react-router-dom';
 import './App.css';
 import FooterComponent from './components/Footer';
@@ -27,6 +28,6 @@ function App(){
 }
 
 
-export default App;
+
 
 
