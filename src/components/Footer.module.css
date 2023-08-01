@@ -1,0 +1,45 @@
+
+.footer {
+  background-color: #f0f2f5;
+  padding: 24px 0;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.linksList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.linksList li {
+  margin-bottom: 8px;
+}
+
+.socialMediaIcons {
+  display: flex;
+  gap: 16px;
+}
+
+.socialIcon {
+  font-size: 24px;
+}
+
+.divider {
+  margin: 24px 0;
+}
+
+.copyRightRow {
+  margin-top: 24px;
+}
+
+.copyRightText {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
