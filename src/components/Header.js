@@ -14,7 +14,11 @@ function Header() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
+<<<<<<< Updated upstream
     const backendUrl = "http://localhost:3000/categories";
+=======
+    const backendUrl = process.env.REACT_APP_API_URL + "/categories";
+>>>>>>> Stashed changes
 
     axios
       .get(backendUrl)
