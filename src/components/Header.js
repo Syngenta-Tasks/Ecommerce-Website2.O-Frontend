@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Input, Menu, Row, Col, Dropdown, Button, Avatar } from "antd";
 import {
@@ -7,13 +7,8 @@ import {
   HeartOutlined,
   ShoppingOutlined,
 } from "@ant-design/icons";
-
+import axios from "axios";
 import styles from "./Header.module.css";
-<<<<<<< Updated upstream
-import "../assets/utils.css";
-
-function Header() {
-=======
 import { useNavigate } from "react-router-dom";
 
 
@@ -51,7 +46,6 @@ function Header() {
     </Menu>
   );
 
->>>>>>> Stashed changes
   const menu = (
     <Menu>
       <Menu.Item >
@@ -79,21 +73,54 @@ function Header() {
         </Col>
         <Col flex="auto">
           <Menu mode="horizontal" className={styles.menu}>
-            <Menu.Item key="men" className={styles["menu-item"]}>
-              <Link to="/men">Men</Link>
-            </Menu.Item>
-            <Menu.Item key="women" className={styles["menu-item"]}>
-              <Link to="/women">Women</Link>
-            </Menu.Item>
-            <Menu.Item key="children" className={styles["menu-item"]}>
-              <Link to="/children">Children</Link>
-            </Menu.Item>
-            <Menu.Item key="beauty" className={styles["menu-item"]}>
-              <Link to="/beauty">Beauty</Link>
-            </Menu.Item>
-            <Menu.Item key="studio" className={styles["menu-item"]}>
-              <Link to="/studio">Studio</Link>
-            </Menu.Item>
+            {data.map((category) =>
+              category.name === "Men" ? (
+                <Menu.SubMenu
+                  key={category.id}
+                  className={styles["menu-item"]}
+                  title={category.name}
+                  popupClassName={styles["menu-item"]}
+                >
+                  {generateSubMenu(category.subcategories)}
+                </Menu.SubMenu>
+              ) : null
+            )}
+            {data.map((category) =>
+              category.name === "Women" ? (
+                <Menu.SubMenu
+                  key={category.id}
+                  className={styles["menu-item"]}
+                  title={category.name}
+                  popupClassName={styles["menu-item"]}
+                >
+                  {generateSubMenu(category.subcategories)}
+                </Menu.SubMenu>
+              ) : null
+            )}
+            {data.map((category) =>
+              category.name === "Children" ? (
+                <Menu.SubMenu
+                  key={category.id}
+                  className={styles["menu-item"]}
+                  title={category.name}
+                  popupClassName={styles["menu-item"]}
+                >
+                  {generateSubMenu(category.subcategories)}
+                </Menu.SubMenu>
+              ) : null
+            )}
+            {data.map((category) =>
+              category.name === "Home & Living" ? (
+                <Menu.SubMenu
+                  key={category.id}
+                  className={styles["menu-item"]}
+                  title={category.name}
+                  popupClassName={styles["menu-item"]}
+                >
+                  {generateSubMenu(category.subcategories)}
+                </Menu.SubMenu>
+              ) : null
+            )}
           </Menu>
         </Col>
         <Col>
