@@ -9,17 +9,58 @@ import {
 } from "@ant-design/icons";
 
 import styles from "./Header.module.css";
+<<<<<<< Updated upstream
 import "../assets/utils.css";
 
 function Header() {
+=======
+import { useNavigate } from "react-router-dom";
+
+
+
+function Header() {
+  const [data, setData] = useState([]);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("access_token");
+    navigate("/login");
+  };
+
+
+  useEffect(() => {
+    const backendUrl = process.env.REACT_APP_API_URL + "/categories";
+    axios
+      .get(backendUrl)
+      .then((response) => {
+        console.log(response.data);
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.log("error in fetching data", error);
+      });
+  }, []);
+
+  const generateSubMenu = (subcategories) => (
+    <Menu>
+      {subcategories.map((subcategory) => (
+        <Menu.Item key={subcategory.id}>
+          <Link to={`/category/${subcategory.id}`}>{subcategory.name}</Link>
+        </Menu.Item>
+      ))}
+    </Menu>
+  );
+
+>>>>>>> Stashed changes
   const menu = (
     <Menu>
-      <Menu.Item>
+      <Menu.Item >
         <Link to="/login">Login</Link>
       </Menu.Item>
       <Menu.Item>
         <Link to="/register">Register</Link>
       </Menu.Item>
+      <Menu.Item onClick={handleLogout}>Logout</Menu.Item>
     </Menu>
   );
 
