@@ -1,0 +1,40 @@
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as per your requirement */
+  }
+  
+  .formBox {
+    width: 400px; /* Set the width of the form */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px; /* Add border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow for the form box */
+  }
+  
+  .formTitle {
+    font-size: 18px;
+    font-weight: bold; /* Make the text bold */
+    margin-bottom: 20px;
+  }
+  
+  .formItem {
+    margin-bottom: 16px;
+  }
+  
+  .formItem label {
+    font-size: 14px;
+    font-weight: bold; 
+  }
+  
+  .formItem input {
+    width: 100%; 
+    font-size: 14px; 
+  }
+  
+  .formButton {
+    display: flex;
+    justify-content: center;
+  }
+  
