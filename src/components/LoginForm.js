@@ -22,7 +22,7 @@ function Login(props) {
   const login = () => {
     console.log(">>>>inside Login function");
     axios
-      .post("http://localhost:3000/user/login", {
+      .post(`${process.env.REACT_APP_API_URL}/user/login`, {
         username: username,
         password: password,
       })
@@ -33,7 +33,7 @@ function Login(props) {
           console.log(">>>>inside line no 389");
 
           axios
-            .get("http://localhost:3000/user/details", {
+            .get(`${process.env.REACT_APP_API_URL}/user/details`, {
               headers: {
                 Authorization: `Bearer ${response.data.access_token}`,
                 Accept: "*/*",
