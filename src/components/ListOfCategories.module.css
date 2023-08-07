@@ -1,0 +1,75 @@
+.categoriesList {
+    text-align: center;
+    margin-top: 20px; 
+    font-size: 20px;
+  }
+  
+  .categoryItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .categoryItem:hover {
+    background-color: #e9e9e9; 
+  }
+  .boldText {
+    font-weight: bold;
+  }
+  
+  .categoryActions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .categoryName {
+    font-weight: bold; 
+    font-size: 18px; 
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .addSubcategoryButton {
+    font-size: 14px; 
+    font-weight: bold; 
+  }
+ 
+  .ant-dropdown-menu {
+    min-width: 200px;
+  }
+  
+  .ant-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  
+  .ant-input {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  .ant-form {
+    font-size: 16px;
+  }
+
+  .dropdownMenu {
+    min-width: 200px; 
+    font-size: 16px;
+  }
+  
+  .dropdownMenuItem {
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdownMenuItem:hover {
+    background-color: #f0f0f0;
+  }
