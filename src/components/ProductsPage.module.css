@@ -2,119 +2,116 @@
   padding: 20px;
 }
 
-
 .heading {
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
   font-weight: bolder;
-  }
-  
-  .fancyHeading {
-    font-family: 'Pacifico', cursive;
-    font-size: 48px;
-    color: #ff005c;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .productsRow {
-    margin-top: 20px; 
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .centerCard {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-   
-  .cards-container {
-      padding-top: 120px;
-    }
-  
-  .productImage {
-      width: 100%; 
-      height: 250px; 
-      object-fit: cover; 
-      border-radius: 8px; 
-    }
-  
-  
-  .productName {
-    font-size: 25px;
-    font-weight: bold;
-    color: #333333;
-    margin: 8px 0;
-    text-align: center;
-    font-family: 'Pacifico', cursive;
-  }
-  
-  .productPrice {
-    font-size: 20px;
-    color: #ff005c;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-    .homepage{
-      padding-top: 16px;
-      margin-top: 80px;
-    }
-  
-    .price {
-      font-weight: bold;
-      font-size: 18px;
-    }
+}
 
-    h1 {
-      font-size: 24px;
-      font-weight: bold;
-      position: relative;
-      top: 10px,
-    }
-  
-     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin-top: 64px; 
-      overflow-y: auto; 
-    }
-  
-  
-    .card {
-      width: 300px;
-      height: 400px;
-      background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      padding: 16px;
-      margin-bottom: 20px;
-    }
-    
-    .card-image {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 16px;
-    }
-    
-    .card-price {
-      font-weight: bold;
-      font-size: 18px;
-    }
-    
-    @media (max-width: 768px) {
-      .card {
-        width: 100%;
-        height: 300px;
-      }
-    
-      .card-image {
-        height: 150px;
-      }
-    }
+.fancyHeading {
+  font-family: "Pacifico", cursive;
+  font-size: 48px;
+  color: #ff005c;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.productsRow {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.centerCard {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cards-container {
+  padding-top: 120px;
+}
+
+.productImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.productName {
+  font-size: 25px;
+  font-weight: bold;
+  color: #333333;
+  margin: 8px 0;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+}
+
+.productPrice {
+  font-size: 20px;
+  color: #ff005c;
+  text-align: center;
+  font-weight: bold;
+}
+
+.homepage {
+  padding-top: 16px;
+  margin-top: 80px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  top: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 64px;
+  overflow-y: auto;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.card-price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    height: 300px;
+  }
+
+  .card-image {
+    height: 150px;
+  }
+}

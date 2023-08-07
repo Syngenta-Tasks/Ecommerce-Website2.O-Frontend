@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Row, Col } from "antd";
 import ProductCard from "./ProductCard";
-import styles from "./ProductsPage.module.css"
+import styles from "./ProductsPage.module.css";
 
 function ProductPage() {
   const [data, setData] = useState([]);
@@ -23,11 +23,11 @@ function ProductPage() {
 
   return (
     <div className={styles.homepage}>
-      <h1 className = {`${styles.heading} ${styles.fancyHeading}`}>Products</h1>
-      <Row gutter={0.1} className={styles.productsRow} >
+      <h1 className={`${styles.heading} ${styles.fancyHeading}`}>Products</h1>
+      <Row gutter={16} className={styles.productsRow}>
         {data.map((product) => (
           <Col span={8} key={product.id} className={styles.centerCard}>
-            <ProductCard product={product}/>
+            <ProductCard product={product} />
           </Col>
         ))}
       </Row>
