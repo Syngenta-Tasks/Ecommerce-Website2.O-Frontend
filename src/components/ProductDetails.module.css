@@ -1,0 +1,37 @@
+.productDetails {
+    max-width: 600px;
+    margin: 150px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .productName {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .productImage {
+    max-width:250px;
+    height: auto ;
+    margin-bottom: 15px;
+    padding-left: 30px;
+  }
+  
+  .price {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .size,
+  .paymentDetails,
+  .deliveryDate {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  
