@@ -10,7 +10,7 @@ function ProductPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const backendUrl = "http://localhost:3000/products";
+        const backendUrl = `${process.env.REACT_APP_API_URL}/products`;
         const response = await axios.get(backendUrl);
         setData(response.data);
       } catch (error) {
