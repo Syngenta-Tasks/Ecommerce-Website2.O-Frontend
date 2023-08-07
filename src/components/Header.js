@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Input, Menu, Row, Col, Dropdown, Button, Avatar } from "antd";
 import {
@@ -7,11 +7,44 @@ import {
   HeartOutlined,
   ShoppingOutlined,
 } from "@ant-design/icons";
-
+import axios from "axios";
 import styles from "./Header.module.css";
-import "../assets/utils.css";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const [data, setData] = useState([]);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("access_token");
+    navigate("/login");
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const backendUrl = process.env.REACT_APP_API_URL + "/categories";
+        const response = await axios.get(backendUrl);
+        console.log(response.data);
+        setData(response.data);
+      } catch (error) {
+        console.log("error in fetching data", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const generateSubMenu = (subcategories) => (
+    <Menu>
+      {subcategories.map((subcategory) => (
+        <Menu.Item key={subcategory.id}>
+          <Link to={`/category/${subcategory.id}`}>{subcategory.name}</Link>
+        </Menu.Item>
+      ))}
+    </Menu>
+  );
+
   const menu = (
     <Menu>
       <Menu.Item>
@@ -20,6 +53,7 @@ function Header() {
       <Menu.Item>
         <Link to="/register">Register</Link>
       </Menu.Item>
+      <Menu.Item onClick={handleLogout}>Logout</Menu.Item>
     </Menu>
   );
 
@@ -38,32 +72,27 @@ function Header() {
         </Col>
         <Col flex="auto">
           <Menu mode="horizontal" className={styles.menu}>
-            <Menu.Item key="men" className={styles["menu-item"]}>
-              <Link to="/men">Men</Link>
-            </Menu.Item>
-            <Menu.Item key="women" className={styles["menu-item"]}>
-              <Link to="/women">Women</Link>
-            </Menu.Item>
-            <Menu.Item key="children" className={styles["menu-item"]}>
-              <Link to="/children">Children</Link>
-            </Menu.Item>
-            <Menu.Item key="beauty" className={styles["menu-item"]}>
-              <Link to="/beauty">Beauty</Link>
-            </Menu.Item>
-            <Menu.Item key="studio" className={styles["menu-item"]}>
-              <Link to="/studio">Studio</Link>
-            </Menu.Item>
+            {data.map((category) => (
+              <Menu.SubMenu
+                key={category.id}
+                className={styles["menu-item"]}
+                title={category.name}
+                popupClassName={styles["menu-item"]}
+              >
+                {generateSubMenu(category.subcategories)}
+              </Menu.SubMenu>
+            ))}
           </Menu>
         </Col>
-        <Col>
-          <div className={styles["search-bar"]}>
-            <Input
+              <Col>
+      <div className={styles["search-bar"]}>
+           <Input
               placeholder="Search for products, brands, and more"
               prefix={<SearchOutlined />}
-              className={styles["search-input"]}
+             className={styles["search-input"]}
             />
-          </div>
-        </Col>
+       </div>
+       </Col>
         <Col>
           <Button type="link" className={styles.profileButton}>
             <Dropdown overlay={menu} placement="bottomRight" arrow>
