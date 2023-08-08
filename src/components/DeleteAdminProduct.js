@@ -11,7 +11,7 @@ const DeleteAdminProduct = () => {
   const onFinish = (values) => {
     setLoading(true);
     axios
-      .delete(`http://localhost:3000/products/${values.productName}`)
+      .delete(`${process.env.REACT_APP_API_URL}/products/${values.productName}`)
       .then((response) => {
         message.success("Product deleted successfully!");
         setLoading(false);

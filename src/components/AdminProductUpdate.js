@@ -11,7 +11,7 @@ const UpdateProductForm = () => {
   const onFinish = (values) => {
     setLoading(true);
     axios
-      .patch(`http://localhost:3000/products/${values.productName}`, {
+      .patch(`${process.env.REACT_APP_API_URL}/products/${values.productName}`, {
         name: values.newProductName,
       })
       .then((response) => {
@@ -45,7 +45,7 @@ const UpdateProductForm = () => {
       </Form.Item>
 
       <Form.Item
-        label="New Category Name"
+        label="New Product Name"
         name="newProductName"
         rules={[
           {
