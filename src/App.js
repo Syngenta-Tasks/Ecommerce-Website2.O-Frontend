@@ -35,15 +35,12 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/" element={<FooterComponent />} />
           <Route path="/products" element={<ProductPage />} />
-
           <Route path="/products/:id" element={<ProductDetails />} />
-
           <Route path="/reset/:token" element={<ResetPassword />} />
           <Route path="/create-category" element={<CategoryForm />} />
           <Route path="/create-subcategory" element={<SubcategoryForm />} />
           <Route path="/update-category" element={<UpdateCategoryForm />} />
           <Route path="/delete-category" element={<DeleteCategoryForm />} />
-
           <Route path="/admin-product" element={<AdminProductForm />} />
         </Routes>
       </div>

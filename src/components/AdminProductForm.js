@@ -31,7 +31,6 @@ function AdminProductForm() {
           paymentDetails,
           deliveryDate,
         },
-
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -40,14 +39,12 @@ function AdminProductForm() {
           },
         }
       );
-
       console.log(response.data);
       navigate(`/admin`);
     } catch (error) {
       console.error("Product Addition failed", error);
     }
   };
-
   return (
     <div className={styles.formContainer}>
       <form
@@ -56,7 +53,6 @@ function AdminProductForm() {
         className={styles.adminForm}
       >
         <h2 className={styles.heading}>Add Product</h2>
-
         <Item
           name="name"
           label="Name"
@@ -67,7 +63,6 @@ function AdminProductForm() {
         >
           <Input />
         </Item>
-
         <Item
           name="price"
           label="Price"
@@ -78,7 +73,6 @@ function AdminProductForm() {
         >
           <Input />
         </Item>
-
         <Item
           name="imageUrl"
           label="ImageUrl"
@@ -91,7 +85,6 @@ function AdminProductForm() {
         >
           <Input />
         </Item>
-
         <Item
           name="size"
           label="Size"
