@@ -1,0 +1,24 @@
+.adminPageContainer {
+  text-align: center;
+}
+.adminHeading {
+  padding-top: 150px;
+  color: green;
+  font-weight: bold;
+  font-size: 30px;
+}
+.redirectButton {
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 17px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.redirectButton:hover {
+  background-color: #0056b3;
+}
