@@ -21,7 +21,7 @@ const FooterComponent = () => {
             <br />
             <Text>Phone: 123-456-7890</Text>
           </Col>
-          <Col xs={24} sm={24} md={6}>
+          <Col xs={24} sm={24} md={8}>
             <Title level={5}>Customer Policies</Title>
             <ul className={styles.linksList}>
               <li>
@@ -35,7 +35,7 @@ const FooterComponent = () => {
               </li>
             </ul>
           </Col>
-          <Col xs={24} sm={24} md={6}>
+          <Col xs={24} sm={24} md={8}>
             <Title level={5}>Social Media</Title>
             <div className={styles.socialMediaIcons}>
               <a href="https://www.facebook.com">
