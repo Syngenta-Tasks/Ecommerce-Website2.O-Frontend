@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-html, body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-header{
+header {
   position: sticky;
   top: 0;
   background: white;
   height: 66px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  
 }
 
 .header {
@@ -24,7 +24,7 @@ header{
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999; 
+  z-index: 999;
 }
 
 .logo {
@@ -42,10 +42,52 @@ header{
 }
 
 .menu {
-  /* display: flex; */
   align-items: center;
+  font-weight: bold;
 }
 
+.menuResp {
+  font-weight: bold;
+}
+
+.hiddenMenu {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  top: 66px;
+  right: 0;
+  z-index: 998;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hiddenMenuItem {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.hiddenMenuItem:hover {
+  background-color: #f0f2f5;
+}
+
+.hiddenMenuItem .anticon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.menuHidden {
+  display: none;
+}
+
+.hamburgerIcon {
+  display: none;
+  font-size: 24px;
+  margin-right: 16px;
+}
 
 .menu a {
   margin: 0 12px;
@@ -53,33 +95,36 @@ header{
   font-weight: bold;
 }
 
-.search-bar{
+.mobileOnly {
+  display: none;
+}
+
+.search-bar {
   size: 100px;
-  /* padding-right: 80px; */
   width: 400px;
 }
 
 .search-input {
-  background-color: #F0F2F5;
+  background-color: #f0f2f5;
   transition: background-color 0.3s ease;
 }
 
 .search-input:focus {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .search-input .ant-input {
-  background-color: #F0F2F5;
+  background-color: #f0f2f5;
   border-radius: 20px;
 }
 
 .search-input .ant-input-prefix svg {
-  fill: #8C8C8C;
+  fill: #8c8c8c;
 }
 
-
 .profileButton,
-.wishlistButton, .bagButton {
+.wishlistButton,
+.bagButton {
   margin-left: 16px;
   color: black;
   display: inline-flex;
@@ -89,129 +134,31 @@ header{
   padding-right: -1px;
 }
 
-.profileButton .ant-avatar, .wishlistButton .anticon, .bagButton .anticon {
+.profileButton .ant-avatar,
+.wishlistButton .anticon,
+.bagButton .anticon {
   font-size: 24px;
   margin-bottom: 4px;
 }
 
-
-
-@media (max-width: 576px) {
-  .searchInput {
-    width: 100%;
-  }
-
+@media (max-width: 500px) {
   .menu {
-    flex-direction: column;
-    align-items: flex-start;
+    display: none;
   }
 
-  .menu a {
-    margin: 8px 0;
+  .hamburgerIcon {
+    display: block;
   }
 
-  .profileButton,
-  .wishlistButton {
-    margin-left: 8px;
-  }
-} 
-
-
-
-/* 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-header{
-  position: sticky;
-  top: 0;
-  background: white;
-  height: 66px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-
-.rightBox{
-    display: flex;
-    margin: 12px;
+  .mobileOnly {
+    display: block;
   }
 
-.left img{
-  width: 32px;
-  height: 23px;
+  .desktopOnly {
+    display: none;
+  }
+
+  .menuHidden .hiddenMenu {
+    display: block;
+  }
 }
-
-.container{ 
-  padding: 0 10vw; 
-}
-
-.containerHeader{ 
-  /* padding: 0 10vw;  */
-  /* padding: 20px;
-}
-
-nav{
-  font-size: 12px;
-  padding-top: 14px;
-}
-
-nav ul li{
-  list-style: none;
-  padding: 0 12px;
-  font-weight: bold;
-  
-}
-
-.section1{
-  background: #f2f2f2; 
-}
-
-.search{
-  width: 34vw;
-    padding: 7px 17px;
-    border: 0.5px solid grey;
-    background: #f7f8fd;
-    border-radius: 5px;
-}
-
-
-
-.homeImg{
-  width: 80vw;
-  margin: 12px 0;
-}
-
-.itemImg{
-  width: 10vw;
-  margin: 6px 12px;
-} */
-
-/* footer{
-  padding: 23px;
-  text-align: center;
-  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
-}
-
-.tall{
-  min-height: 40vh;
-}
-
-@media (max-width: 450px) { 
-.search {
-    width: 72vw; 
-}
-}
-
-@media (max-width: 1550px) { 
-
-  nav ul li {
-    list-style: none;
-    padding: 0 4px;
-    font-size: 10px;
-}
-} */ 
