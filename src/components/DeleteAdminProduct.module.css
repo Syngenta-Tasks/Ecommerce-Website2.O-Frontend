@@ -1,0 +1,61 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.formBox {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.formTitle {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.ant-form-item-label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.ant-form-item-control-input-content {
+  font-size: 16px;
+}
+
+.ant-btn-primary {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+}
+
+@media (max-width: 500px) {
+  .formBox {
+    padding: 15px;
+    width: 70%;
+    max-width: 70%;
+  }
+
+  .formTitle {
+    font-size: 20px;
+  }
+
+  .ant-form-item-label {
+    font-size: 14px;
+  }
+
+  .ant-form-item-control-input-content {
+    font-size: 14px;
+  }
+
+  .ant-btn-primary {
+    height: 36px;
+    font-size: 14px;
+  }
+}
