@@ -9,11 +9,10 @@ function SubcategoryForm() {
   const [subcategoryName, setSubcategoryName] = useState("");
   const navigate = useNavigate();
 
-
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const backendUrl = "http://localhost:3000/categories";
+        const backendUrl = `${process.env.REACT_APP_API_URL}/categories`;
         const response = await axios.get(backendUrl);
         setCategories(response.data);
       } catch (error) {
@@ -28,17 +27,15 @@ function SubcategoryForm() {
     e.preventDefault();
 
     try {
-      // const backendUrl = process.env.REACT_APP_API_URL + "/subcategories";
-      const backendUrl = "http://localhost:3000/subcategories";
+      const backendUrl = `${process.env.REACT_APP_API_URL}/subcategories`;
       const response = await axios.post(backendUrl, {
         subcategory: subcategoryName,
         name: subcategoryName,
         categoryId: selectedCategory,
       });
       console.log("Subcategory created:", response.data);
-      setSubcategoryName(""); 
+      setSubcategoryName("");
       navigate("/admin");
-
     } catch (error) {
       console.log("error creating subcategory", error);
     }
@@ -47,36 +44,37 @@ function SubcategoryForm() {
   return (
     <div className={styles.subcategoryFormContainer}>
       <div className={styles.formContainer}>
-      <h2>Create Subcategory</h2>
-      <form onSubmit={handleSubcategorySubmit}>
-        <div>
-          <label className={styles.label}>Select Category:</label>
-          <select
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-            className={styles.inputField}
-          >
-            <option value="">Select a category</option>
-            {categories.map((category) => (
-              <option key={category.id} value={category.id}>
-                {category.name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label className={styles.label}
->Subcategory Name:</label>
-          <input
-            type="text"
-            value={subcategoryName}
-            onChange={(e) => setSubcategoryName(e.target.value)}
-            className={styles.inputField}
-          />
-        </div>
-        <button type="submit" className={styles.submitButton}>Create Subcategory</button>
-      </form>
-    </div>
+        <h2>Create Subcategory</h2>
+        <form onSubmit={handleSubcategorySubmit}>
+          <div>
+            <label className={styles.label}>Select Category:</label>
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className={styles.inputField}
+            >
+              <option value="">Select a category</option>
+              {categories.map((category) => (
+                <option key={category.id} value={category.id}>
+                  {category.name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className={styles.label}>Subcategory Name:</label>
+            <input
+              type="text"
+              value={subcategoryName}
+              onChange={(e) => setSubcategoryName(e.target.value)}
+              className={styles.inputField}
+            />
+          </div>
+          <button type="submit" className={styles.submitButton}>
+            Create Subcategory
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
