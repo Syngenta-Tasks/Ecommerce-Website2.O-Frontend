@@ -1,0 +1,176 @@
+
+.categoriesList {
+    text-align: center; /* Center align the content */
+    margin-top: 20px; 
+    font-size: 20px;/* Add some top margin */
+  }
+  
+  .categoryItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    /* margin: 10px 0; */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .categoryItem:hover {
+    background-color: #e9e9e9; /* Highlight background on hover */
+  }
+  .boldText {
+    font-weight: bold; /* Make text bold */
+  }
+  
+  .categoryActions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .categoryName {
+    font-weight: bold; /* Increase font weight */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .addSubcategoryButton {
+    font-size: 14px; /* Increase font size */
+    font-weight: bold; /* Increase font weight */
+  }
+ 
+  .ant-dropdown-menu {
+    min-width: 200px; /* Adjust as needed */
+  }
+  
+  /* Increase the size of buttons */
+  .ant-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  
+  /* Increase the size of input boxes */
+  .ant-input {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  /* Increase the size of forms */
+  .ant-form {
+    font-size: 16px;
+  }
+
+  .dropdownMenu {
+    min-width: 200px; /* Adjust width as needed */
+    font-size: 16px;
+  }
+  
+  .dropdownMenuItem {
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdownMenuItem:hover {
+    background-color: #f0f0f0;
+  }
+
+
+
+  /* Existing styles */
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .categoriesList {
+    font-size: 16px; /* Decrease font size for smaller screens */
+    margin-top: 10px; /* Reduce top margin for smaller screens */
+  }
+
+  .categoryItem {
+    padding: 8px; /* Reduce padding for smaller screens */
+    margin-bottom: 10px; /* Reduce bottom margin for smaller screens */
+  }
+
+  .boldText {
+    font-weight: bold;
+  }
+
+  .categoryName {
+    font-size: 16px; /* Decrease font size for smaller screens */
+  }
+
+  .ant-btn {
+    font-size: 14px; /* Decrease font size for smaller screens */
+    padding: 6px 12px; /* Decrease padding for smaller screens */
+  }
+
+  .ant-input {
+    font-size: 14px; /* Decrease font size for smaller screens */
+    padding: 8px; /* Decrease padding for smaller screens */
+  }
+
+  .ant-form {
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+
+  .dropdownMenu {
+    min-width: 180px; /* Adjust width for smaller screens */
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+
+  .dropdownMenuItem {
+    padding: 6px 10px; /* Decrease padding for smaller screens */
+  }
+}
+
+
+/* Existing styles */
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  /* .categoriesList {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .categoryItem {
+    padding: 8px; 
+    margin-bottom: 10px; 
+  } */
+
+  .boldText {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  /* .categoryName {
+    font-size: 16px; 
+  }
+
+  .ant-btn {
+    font-size: 14px; 
+    padding: 6px 12px; 
+  }
+
+  .ant-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .ant-form {
+    font-size: 14px;
+  }
+
+  .dropdownMenu {
+    min-width: 180px;
+    font-size: 14px; 
+  }
+
+  .dropdownMenuItem {
+    padding: 6px 10px; 
+  }  */
+}
